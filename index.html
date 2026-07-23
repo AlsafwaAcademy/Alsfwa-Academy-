@@ -4,383 +4,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية الصفوة</title>
 
-<title>أكاديمية الصفوة | Al Safwa Academy</title>
+<link rel="stylesheet" href="style.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Cairo',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#f8fbff;
-color:#16365c;
-overflow-x:hidden;
-}
-
-:root{
---blue:#4DA3FF;
---dark:#18457A;
---gold:#D4AF37;
---white:#ffffff;
---light:#EEF7FF;
-}
-
-nav{
-position:fixed;
-top:0;
-left:0;
-right:0;
-height:80px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 8%;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-box-shadow:0 2px 15px rgba(0,0,0,.08);
-z-index:1000;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.logo img{
-width:60px;
-height:60px;
-border-radius:50%;
-}
-
-.logo h2{
-color:var(--dark);
-font-size:26px;
-}
-
-.menu{
-display:flex;
-gap:30px;
-}
-
-.menu a{
-text-decoration:none;
-color:var(--dark);
-font-weight:700;
-transition:.3s;
-}
-
-.menu a:hover{
-color:var(--gold);
-}
-
-.lang{
-padding:10px 18px;
-background:var(--blue);
-color:white;
-border-radius:8px;
-cursor:pointer;
-}
-
-.hero{
-
-height:100vh;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-padding:0 8%;
-
-background:
-linear-gradient(135deg,#eef7ff,#ffffff);
-
-}
-
-.hero-text{
-
-width:50%;
-
-}
-
-.hero-text h1{
-
-font-size:60px;
-
-color:var(--dark);
-
-margin-bottom:20px;
-
-}
-
-.hero-text span{
-
-color:var(--gold);
-
-}
-
-.hero-text p{
-
-font-size:22px;
-
-line-height:2;
-
-margin-bottom:35px;
-
-color:#456;
-
-}
-
-.buttons{
-
-display:flex;
-
-gap:20px;
-
-}
-
-.btn{
-
-padding:15px 35px;
-
-border-radius:12px;
-
-text-decoration:none;
-
-font-size:18px;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-.primary{
-
-background:var(--blue);
-
-color:white;
-
-}
-
-.primary:hover{
-
-transform:translateY(-5px);
-
-}
-
-.secondary{
-
-background:var(--gold);
-
-color:white;
-
-}
-
-.secondary:hover{
-
-transform:translateY(-5px);
-
-}
-
-.hero-image{
-
-width:45%;
-
-display:flex;
-
-justify-content:center;
-
-}
-
-.hero-image img{
-
-width:90%;
-
-max-width:500px;
-
-animation:float 4s ease-in-out infinite;
-
-}
-
-@keyframes float{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-}
-
-section{
-
-padding:90px 8%;
-
-}
-
-.title{
-
-text-align:center;
-
-font-size:42px;
-
-color:var(--dark);
-
-margin-bottom:50px;
-
-position:relative;
-
-}
-
-.title::after{
-
-content:"";
-
-width:90px;
-
-height:4px;
-
-background:var(--gold);
-
-display:block;
-
-margin:15px auto;
-
-border-radius:10px;
-
-}
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:25px;
-
-}
-
-.card{
-
-background:white;
-
-padding:35px;
-
-border-radius:18px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-transition:.4s;
-
-text-align:center;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.card h3{
-
-margin:20px 0;
-
-color:var(--dark);
-
-}
-
-.card p{
-
-line-height:2;
-
-}
-
-</style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<nav>
+<header>
 
 <div class="logo">
-
-<img src="logo.png">
-
+<img src="images/logo.png" alt="">
+<div>
 <h2>أكاديمية الصفوة</h2>
-
+<p>Al Safwa Academy</p>
+</div>
 </div>
 
-<div class="menu">
+<nav>
 
-<a href="#">الرئيسية</a>
-
-<a href="#courses">الدورات</a>
-
-<a href="#about">من نحن</a>
-
-<a href="#contact">تواصل</a>
-
-</div>
-
-<div class="lang">
-AR | EN
-</div>
+<a class="active" href="#">الرئيسية</a>
+<a href="#">الدورات</a>
+<a href="#">من نحن</a>
+<a href="#">المعلمون</a>
+<a href="#">الأسعار</a>
+<a href="#">تواصل معنا</a>
 
 </nav>
+
+<button class="lang">
+AR | EN
+</button>
+
+</header>
 
 <section class="hero">
 
 <div class="hero-text">
 
 <h1>
-
-تعلم مع
-
-<span>
-
-أكاديمية الصفوة
-
-</span>
-
+تعلم الخير
+<br>
+للمستقبل الأفضل
 </h1>
 
 <p>
-
-لتعليم القرآن الكريم واللغة العربية والدراسات الإسلامية والمواد الدراسية
-
-بأفضل المعلمين والمعلمات عبر الإنترنت.
-
+أكاديمية الصفوة لتعليم القرآن الكريم واللغة العربية
+والدراسات الإسلامية والمواد الدراسية عن بعد.
 </p>
 
 <div class="buttons">
 
-<a href="#courses" class="btn primary">
-
-ابدأ التعلم
-
+<a class="gold" href="#">
+سجل الآن
 </a>
 
-<a href="https://wa.me/201280308515" class="btn secondary">
-
-واتساب
-
+<a class="blue" href="#">
+استكشف الدورات
 </a>
 
 </div>
@@ -389,274 +76,452 @@ AR | EN
 
 <div class="hero-image">
 
-<img src="hero.png">
+<img src="images/quran.png">
 
 </div>
 
 </section>
-<!-- الخدمات -->
+  <!-- الخدمات -->
 
-<section id="courses">
+<section class="services">
 
-<h2 class="title">خدمات الأكاديمية</h2>
+<h2 class="section-title">
+خدمات الأكاديمية
+</h2>
 
 <div class="cards">
 
 <div class="card">
-<h1>📖</h1>
+
+<i class="fa-solid fa-book-quran"></i>
+
 <h3>القرآن الكريم</h3>
+
 <p>
-تحفيظ القرآن الكريم، التجويد، التصحيح، والإجازات على أيدي معلمين ومعلمات متخصصين.
+تحفيظ القرآن الكريم وأحكام التجويد
+بإشراف معلمين متخصصين.
 </p>
+
+<a href="#">
+اقرأ المزيد
+</a>
+
 </div>
 
 <div class="card">
-<h1>📚</h1>
+
+<i class="fa-solid fa-book-open"></i>
+
 <h3>اللغة العربية</h3>
+
 <p>
-تعليم القراءة والكتابة، النحو، البلاغة، والإملاء لجميع الأعمار.
+تعليم القراءة والكتابة والنحو
+والإملاء لجميع الأعمار.
 </p>
+
+<a href="#">
+اقرأ المزيد
+</a>
+
 </div>
 
 <div class="card">
-<h1>☪️</h1>
+
+<i class="fa-solid fa-mosque"></i>
+
 <h3>الدراسات الإسلامية</h3>
+
 <p>
-العقيدة، الفقه، الحديث، السيرة النبوية، والتفسير بطريقة مبسطة.
+العقيدة والفقه والسيرة
+والحديث بطريقة مبسطة.
 </p>
+
+<a href="#">
+اقرأ المزيد
+</a>
+
 </div>
 
 <div class="card">
-<h1>🎓</h1>
+
+<i class="fa-solid fa-graduation-cap"></i>
+
 <h3>المواد الدراسية</h3>
+
 <p>
-شرح المواد الدراسية لجميع المراحل مع نخبة من أفضل المعلمين.
+شرح جميع المواد الدراسية
+مع أفضل المعلمين.
 </p>
+
+<a href="#">
+اقرأ المزيد
+</a>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- من نحن -->
+<!-- لماذا الصفوة -->
 
-<section id="about" style="background:#EEF7FF;">
+<section class="features">
 
-<h2 class="title">من نحن</h2>
+<h2 class="section-title">
+لماذا أكاديمية الصفوة؟
+</h2>
 
-<div style="max-width:900px;margin:auto;text-align:center;font-size:20px;line-height:2.2;">
+<div class="feature-box">
+
+<div>
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h3>معلمون محترفون</h3>
 
 <p>
-
-أكاديمية الصفوة منصة تعليمية متخصصة في تعليم القرآن الكريم واللغة العربية والدراسات الإسلامية والمواد الدراسية، ونسعى إلى تقديم تعليم متميز يجمع بين الجودة والمرونة باستخدام أحدث وسائل التعليم عن بُعد.
-
+فريق من أفضل المعلمين أصحاب الخبرة.
 </p>
 
 </div>
 
-</section>
+<div>
 
-<!-- لماذا نحن -->
+<i class="fa-solid fa-laptop"></i>
 
-<section>
-
-<h2 class="title">لماذا أكاديمية الصفوة؟</h2>
-
-<div class="cards">
-
-<div class="card">
-<h2>⭐</h2>
-<h3>معلمون مؤهلون</h3>
-<p>فريق من المعلمين والمعلمات ذوي الخبرة والكفاءة.</p>
-</div>
-
-<div class="card">
-<h2>🖥️</h2>
 <h3>تعليم أونلاين</h3>
-<p>دروس مباشرة من أي مكان في العالم.</p>
+
+<p>
+احضر دروسك من أي مكان في العالم.
+</p>
+
 </div>
 
-<div class="card">
-<h2>📅</h2>
+<div>
+
+<i class="fa-solid fa-calendar-days"></i>
+
 <h3>مواعيد مرنة</h3>
-<p>يمكن اختيار الوقت المناسب للطالب.</p>
+
+<p>
+اختر الوقت المناسب لك بسهولة.
+</p>
+
 </div>
 
-<div class="card">
-<h2>📜</h2>
+<div>
+
+<i class="fa-solid fa-chart-line"></i>
+
 <h3>متابعة مستمرة</h3>
-<p>تقارير دورية وخطة تعليمية واضحة لكل طالب.</p>
+
+<p>
+تقارير دورية عن مستوى الطالب.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- أرقام سريعة -->
+<!-- الإحصائيات -->
 
-<section style="background:#18457A;color:white;">
+<section class="stats">
 
-<div class="cards">
+<div>
 
-<div class="card">
-<h1 style="color:#D4AF37;">500+</h1>
+<h2>500+</h2>
+
 <p>طالب وطالبة</p>
+
 </div>
 
-<div class="card">
-<h1 style="color:#D4AF37;">25+</h1>
+<div>
+
+<h2>25+</h2>
+
 <p>معلم ومعلمة</p>
+
 </div>
 
-<div class="card">
-<h1 style="color:#D4AF37;">10+</h1>
+<div>
+
+<h2>10+</h2>
+
 <p>دول حول العالم</p>
-</div>
-
-<div class="card">
-<h1 style="color:#D4AF37;">100%</h1>
-<p>تعليم عن بُعد</p>
-</div>
 
 </div>
 
-</section>
-<!-- تواصل معنا -->
+<div>
 
-<section id="contact">
+<h2>100%</h2>
 
-<h2 class="title">تواصل معنا</h2>
-
-<div class="cards">
-
-<div class="card">
-<h2>📱 واتساب</h2>
-<p>
-<a href="https://wa.me/201280308515"
-style="text-decoration:none;color:#18457A;font-weight:bold;">
-+20 128 030 8515
-</a>
-</p>
-</div>
-
-<div class="card">
-<h2>📧 البريد الإلكتروني</h2>
-<p>
-<a href="mailto:alsfwtakadymy@gmail.com"
-style="text-decoration:none;color:#18457A;font-weight:bold;">
-alsfwtakadymy@gmail.com
-</a>
-</p>
-</div>
-
-<div class="card">
-<h2>🌍 اللغات</h2>
-<p>العربية | English</p>
-</div>
+<p>تعليم عن بعد</p>
 
 </div>
 
 </section>
+  Create a modern, premium Islamic education website for Al Safwa Academy.
 
-<!-- زر واتساب -->
+Requirements:
+  
 
-<a href="https://wa.me/201280308515"
-target="_blank"
-style="
-position:fixed;
-bottom:25px;
-left:25px;
-width:65px;
-height:65px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:32px;
-text-decoration:none;
-color:white;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-z-index:9999;
-">
-💬
-</a>
+- Elegant Islamic design with blue, white, and gold colors.
+- Beautiful hero section with a high-quality Quran image.
+- Islamic geometric patterns in the background.
+- Decorative Islamic arches and subtle ornaments.
+- Floating Islamic book illustrations.
+- Premium animations using CSS.
+- Responsive design for mobile and desktop.
+- Glassmorphism cards with hover effects.
+- Modern navigation bar.
+- Arabic RTL support.
+- Google Font: Cairo.
+- Sections:
+  - Hero
+  - Academy Services
+  - Why Choose Us
+  - Statistics
+  - Teachers
+  - Student Testimonials
+  - FAQ
+  - Contact
+  - Footer
+- Add high-quality Islamic icons.
+- Add decorative books, Quran, mosque, and Arabic calligraphy elements.
+- Smooth scrolling.
+- Animated counters.
+- Scroll reveal animations.
+- Professional buttons with gradients.
+- Premium shadows and rounded corners.
+- Clean HTML, CSS and JavaScript.
+- SEO friendly.
+- Fast loading.
+Create a modern, premium Islamic education website for Al Safwa Academy.
+
+Requirements:
+<!-- آراء الطلاب -->
+
+<section class="testimonials">
+
+    <h2 class="section-title">ماذا يقول طلابنا؟</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                أكاديمية الصفوة ساعدتني في حفظ القرآن الكريم
+                وتحسين تلاوتي، أنصح بها الجميع.
+            </p>
+
+            <div class="student">
+
+                <img src="images/student1.jpg" alt="">
+
+                <div>
+                    <h4>أحمد محمد</h4>
+                    <span>مصر</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                تعلمت اللغة العربية بطريقة سهلة وممتعة مع
+                أفضل المعلمين.
+            </p>
+
+            <div class="student">
+
+                <img src="images/student2.jpg" alt="">
+
+                <div>
+                    <h4>فاطمة علي</h4>
+                    <span>السعودية</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                شرح المواد الدراسية ممتاز وساعدني على رفع
+                مستواي الدراسي بشكل كبير.
+            </p>
+
+            <div class="student">
+
+                <img src="images/student3.jpg" alt="">
+
+                <div>
+                    <h4>يوسف خالد</h4>
+                    <span>الإمارات</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- الأسئلة الشائعة -->
+
+<section class="faq">
+
+<h2 class="section-title">
+الأسئلة الشائعة
+</h2>
+
+<div class="faq-item">
+<h3>كيف يمكنني التسجيل؟</h3>
+<p>يمكنك التسجيل من خلال زر "سجل الآن" أو التواصل معنا عبر واتساب.</p>
+</div>
+
+<div class="faq-item">
+<h3>هل يوجد دروس تجريبية؟</h3>
+<p>نعم، نوفر حصة تجريبية مجانية قبل الاشتراك.</p>
+</div>
+
+<div class="faq-item">
+<h3>ما هي طرق الدفع؟</h3>
+<p>التحويل البنكي، المحافظ الإلكترونية، وبطاقات الدفع.</p>
+</div>
+
+<div class="faq-item">
+<h3>هل الدروس فردية أم جماعية؟</h3>
+<p>نوفر الدروس الفردية والجماعية حسب رغبة الطالب.</p>
+</div>
+
+</section>
 
 <!-- الفوتر -->
 
-<footer
-style="
-background:#18457A;
-color:white;
-padding:70px 8%;
-margin-top:80px;
-">
+<footer>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px;
-">
+<div class="footer-content">
 
 <div>
 
-<h2 style="color:#D4AF37;">
-أكاديمية الصفوة
-</h2>
+<h3>أكاديمية الصفوة</h3>
 
-<p style="margin-top:20px;line-height:2;">
-لتعليم القرآن الكريم واللغة العربية والدراسات الإسلامية والمواد الدراسية
-عن بُعد بأفضل المعلمين والمعلمات.
+<p>
+منصة تعليمية متخصصة في تعليم القرآن الكريم
+واللغة العربية والدراسات الإسلامية عن بعد.
 </p>
 
 </div>
 
 <div>
 
-<h3 style="color:#D4AF37;">روابط سريعة</h3>
+<h3>روابط سريعة</h3>
 
-<p><a href="#" style="color:white;text-decoration:none;">الرئيسية</a></p>
+<ul>
 
-<p><a href="#courses" style="color:white;text-decoration:none;">الدورات</a></p>
+<li><a href="#">الرئيسية</a></li>
+<li><a href="#">الدورات</a></li>
+<li><a href="#">من نحن</a></li>
+<li><a href="#">المعلمون</a></li>
+<li><a href="#">تواصل معنا</a></li>
 
-<p><a href="#about" style="color:white;text-decoration:none;">من نحن</a></p>
-
-<p><a href="#contact" style="color:white;text-decoration:none;">تواصل معنا</a></p>
+</ul>
 
 </div>
 
 <div>
 
-<h3 style="color:#D4AF37;">تواصل</h3>
+<h3>تواصل معنا</h3>
 
-<p>📱 +20 128 030 8515</p>
+<p>📞 +20 128 030 8515</p>
 
-<p>📧 alsfwtakadymy@gmail.com</p>
+<p>✉️ alsafwaacademy@gmail.com</p>
+
+<p>🌍 متاحون لخدمتكم طوال الأسبوع</p>
 
 </div>
 
 </div>
 
-<hr style="margin:40px 0;border:none;height:1px;background:#ffffff33;">
+<div class="copyright">
 
-<p style="text-align:center;">
 © 2026 Al Safwa Academy | جميع الحقوق محفوظة
-</p>
+
+</div>
 
 </footer>
 
-<script>
-
-// تغيير اللغة (سيتم تطويره لاحقاً)
-
-document.querySelector(".lang").onclick=function(){
-
-alert("سيتم إضافة الترجمة العربية والإنجليزية في الإصدار القادم.");
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
+Redesign the website with a premium Islamic and Arabic identity.
+
+Requirements:
+
+- Keep the current content but make the design much more elegant.
+- Use a luxury color palette: royal blue, white, and gold.
+- Add Islamic geometric patterns in the background.
+- Add beautiful Islamic arches in the hero section.
+- Use high-quality illustrations of the Holy Quran, Islamic books, mosques, Arabic calligraphy, lanterns, and elegant Islamic decorations.
+- Add realistic Islamic education images for students learning the Quran online.
+- Use subtle Arabic ornaments around section titles.
+- Add decorative floating books and Islamic elements with smooth animations.
+- Create a premium hero section with an inspiring Islamic atmosphere.
+- Use modern glassmorphism cards.
+- Add soft shadows and smooth hover animations.
+- Use Cairo font for Arabic.
+- Keep the website responsive for mobile and desktop.
+- Improve spacing, typography, and visual hierarchy.
+- Add elegant icons for every service.
+- Add professional section dividers inspired by Islamic architecture.
+- Add a WhatsApp floating button.
+- Add social media icons in the footer.
+- Use the provided Al Safwa Academy logo throughout the website.
+- Make the website look like a premium international Islamic academy, clean, modern, and trustworthy.
+Redesign the website with a premium Islamic and Arabic identity.
+The website must be fully bilingual (Arabic and English).
+
+Requirements:
+
+- Arabic is the default language.
+- Add a professional language switcher (AR | EN) in the header.
+- Translate every page, section, button, menu, form, testimonial, and footer.
+- When Arabic is selected, the layout must use RTL.
+- When English is selected, the layout must automatically switch to LTR.
+- Keep the same design, animations, icons, and images in both languages.
+- Remember the user's language preference using localStorage.
+- All SEO metadata (title, description, keywords) should also support both Arabic and English.
+Create a complete multi-page website including:
+- Home
+- Courses
+- Teachers
+- About Us
+- Pricing
+- Contact
+- Student Dashboard (UI)
+- Login
+- Register
+- 404 Page
+
+Use clean HTML, CSS, and JavaScript with a professional folder structure and reusable components.
+Make the design comparable to the best modern Islamic education websites, with premium visuals, professional illustrations, and an elegant user experience. Avoid a generic template appearance.
