@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -6,76 +8,153 @@
 <title>أكاديمية الصفوة</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,Arial,sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Tahoma, Arial, sans-serif;
-    background:#f5f7fa;
-    text-align:center;
+background:#f4f7fb;
+color:#222;
 }
+
+nav{
+background:#0d47a1;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
 header{
-    background:#0d47a1;
-    color:white;
-    padding:50px 20px;
+background:linear-gradient(135deg,#0d47a1,#1976d2);
+color:#fff;
+padding:80px 20px;
+text-align:center;
 }
+
 header h1{
-    margin:0;
-    font-size:36px;
+font-size:42px;
+margin-bottom:15px;
 }
+
 header p{
-    font-size:20px;
+font-size:20px;
+margin-bottom:25px;
 }
+
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    background:#ff9800;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:8px;
-    font-size:18px;
+background:#ff9800;
+color:#fff;
+padding:14px 28px;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
 }
+
 section{
-    padding:40px 20px;
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
+
+h2{
+text-align:center;
+margin-bottom:30px;
+color:#0d47a1;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
 .card{
-    background:white;
-    max-width:700px;
-    margin:auto;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
+background:#fff;
+width:300px;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
 }
+
 footer{
-    background:#0d47a1;
-    color:white;
-    padding:15px;
-    margin-top:40px;
+background:#0d47a1;
+color:#fff;
+padding:20px;
+text-align:center;
+margin-top:40px;
 }
 </style>
+
 </head>
 
 <body>
 
+<nav>
+<a href="#">الرئيسية</a>
+<a href="#about">من نحن</a>
+<a href="#courses">الدورات</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
+
 <header>
 <h1>أكاديمية الصفوة</h1>
-<p>منصة تعليمية لتطوير مهاراتك وتحقيق النجاح</p>
-<a href="#" class="btn">ابدأ الآن</a>
+<p>نحو تعليم متميز ومستقبل أفضل</p>
+<a href="#" class="btn">سجل الآن</a>
 </header>
 
-<section>
-<div class="card">
-<h2>من نحن؟</h2>
-<p>
-أكاديمية الصفوة تقدم دورات تعليمية عالية الجودة في مختلف المجالات
-بأسلوب احترافي وحديث.
+<section id="about">
+<h2>من نحن</h2>
+<p style="text-align:center;font-size:18px;">
+أكاديمية الصفوة تقدم دورات تعليمية احترافية في مختلف المجالات، مع نخبة من المدربين وخطة تعليمية حديثة.
 </p>
+</section>
+
+<section id="courses">
+<h2>الدورات</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>اللغة الإنجليزية</h3>
+<p>تعلم الإنجليزية من الصفر حتى الاحتراف.</p>
 </div>
+
+<div class="card">
+<h3>البرمجة</h3>
+<p>تعلم تصميم وبرمجة المواقع والتطبيقات.</p>
+</div>
+
+<div class="card">
+<h3>التسويق الإلكتروني</h3>
+<p>تعلم التسويق وإدارة الحملات الإعلانية.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+<h2>تواصل معنا</h2>
+<p style="text-align:center;">📞 01000000000</p>
+<p style="text-align:center;">📧 info@alsafwaacademy.com</p>
 </section>
 
 <footer>
-© 2026 جميع الحقوق محفوظة - أكاديمية الصفوة
+جميع الحقوق محفوظة © 2026 أكاديمية الصفوة
 </footer>
 
 </body>
 </html>
-
