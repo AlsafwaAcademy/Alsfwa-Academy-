@@ -1,298 +1,662 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>أكاديمية الصفوة</title>
+
+<title>أكاديمية الصفوة | Al Safwa Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Tahoma,Arial,sans-serif;
+font-family:'Cairo',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
-color:#333;
-line-height:1.8;
+background:#f8fbff;
+color:#16365c;
+overflow-x:hidden;
+}
+
+:root{
+--blue:#4DA3FF;
+--dark:#18457A;
+--gold:#D4AF37;
+--white:#ffffff;
+--light:#EEF7FF;
 }
 
 nav{
 position:fixed;
 top:0;
-right:0;
 left:0;
-background:#0d47a1;
+right:0;
+height:80px;
 display:flex;
-justify-content:center;
-gap:25px;
-padding:18px;
-z-index:999;
-box-shadow:0 2px 10px rgba(0,0,0,.2);
+justify-content:space-between;
+align-items:center;
+padding:0 8%;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(10px);
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
 }
 
-nav a{
-color:#fff;
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+.logo h2{
+color:var(--dark);
+font-size:26px;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
 text-decoration:none;
-font-weight:bold;
+color:var(--dark);
+font-weight:700;
 transition:.3s;
 }
 
-nav a:hover{
-color:#FFD54F;
+.menu a:hover{
+color:var(--gold);
+}
+
+.lang{
+padding:10px 18px;
+background:var(--blue);
+color:white;
+border-radius:8px;
+cursor:pointer;
 }
 
 .hero{
+
 height:100vh;
-background:linear-gradient(rgba(13,71,161,.8),rgba(13,71,161,.8)),
-url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600");
-background-size:cover;
-background-position:center;
+
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-padding:20px;
+justify-content:space-between;
+
+padding:0 8%;
+
+background:
+linear-gradient(135deg,#eef7ff,#ffffff);
+
 }
 
-.hero h1{
-font-size:52px;
+.hero-text{
+
+width:50%;
+
+}
+
+.hero-text h1{
+
+font-size:60px;
+
+color:var(--dark);
+
 margin-bottom:20px;
+
 }
 
-.hero p{
+.hero-text span{
+
+color:var(--gold);
+
+}
+
+.hero-text p{
+
 font-size:22px;
-margin-bottom:30px;
+
+line-height:2;
+
+margin-bottom:35px;
+
+color:#456;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:20px;
+
 }
 
 .btn{
-background:#ff9800;
+
 padding:15px 35px;
-border-radius:8px;
+
+border-radius:12px;
+
 text-decoration:none;
-color:white;
+
 font-size:18px;
+
 font-weight:bold;
-display:inline-block;
+
 transition:.3s;
+
 }
 
-.btn:hover{
-background:#fb8c00;
-transform:scale(1.05);
+.primary{
+
+background:var(--blue);
+
+color:white;
+
+}
+
+.primary:hover{
+
+transform:translateY(-5px);
+
+}
+
+.secondary{
+
+background:var(--gold);
+
+color:white;
+
+}
+
+.secondary:hover{
+
+transform:translateY(-5px);
+
+}
+
+.hero-image{
+
+width:45%;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:90%;
+
+max-width:500px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
 }
 
 section{
-padding:90px 20px;
-max-width:1200px;
-margin:auto;
+
+padding:90px 8%;
+
 }
 
 .title{
+
 text-align:center;
-font-size:36px;
-color:#0d47a1;
-margin-bottom:40px;
+
+font-size:42px;
+
+color:var(--dark);
+
+margin-bottom:50px;
+
+position:relative;
+
+}
+
+.title::after{
+
+content:"";
+
+width:90px;
+
+height:4px;
+
+background:var(--gold);
+
+display:block;
+
+margin:15px auto;
+
+border-radius:10px;
+
 }
 
 .cards{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
 gap:25px;
+
 }
 
 .card{
+
 background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-transition:.3s;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.4s;
+
+text-align:center;
+
 }
 
 .card:hover{
-transform:translateY(-8px);
+
+transform:translateY(-10px);
+
 }
 
 .card h3{
-color:#0d47a1;
-margin-bottom:15px;
+
+margin:20px 0;
+
+color:var(--dark);
+
 }
+
+.card p{
+
+line-height:2;
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <nav>
-<a href="#home">الرئيسية</a>
-<a href="#about">من نحن</a>
+
+<div class="logo">
+
+<img src="logo.png">
+
+<h2>أكاديمية الصفوة</h2>
+
+</div>
+
+<div class="menu">
+
+<a href="#">الرئيسية</a>
+
 <a href="#courses">الدورات</a>
-<a href="#features">المميزات</a>
-<a href="#contact">تواصل معنا</a>
+
+<a href="#about">من نحن</a>
+
+<a href="#contact">تواصل</a>
+
+</div>
+
+<div class="lang">
+AR | EN
+</div>
+
 </nav>
 
-<section class="hero" id="home">
-<div>
-<h1>أكاديمية الصفوة</h1>
-<p>نحو تعليم متميز ومستقبل أفضل</p>
-<a href="#courses" class="btn">استعرض الدورات</a>
-</div>
-</section>
+<section class="hero">
 
-<section id="about">
-<h2 class="title">من نحن</h2>
+<div class="hero-text">
 
-<div class="card">
+<h1>
+
+تعلم مع
+
+<span>
+
+أكاديمية الصفوة
+
+</span>
+
+</h1>
+
 <p>
-أكاديمية الصفوة مؤسسة تعليمية تهدف إلى تقديم تعليم عالي الجودة
-بأساليب حديثة، مع نخبة من المدربين والخبراء لمساعدة الطلاب على
-تحقيق النجاح والتفوق.
+
+لتعليم القرآن الكريم واللغة العربية والدراسات الإسلامية والمواد الدراسية
+
+بأفضل المعلمين والمعلمات عبر الإنترنت.
+
 </p>
+
+<div class="buttons">
+
+<a href="#courses" class="btn primary">
+
+ابدأ التعلم
+
+</a>
+
+<a href="https://wa.me/201280308515" class="btn secondary">
+
+واتساب
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="hero.png">
+
 </div>
 
 </section>
+<!-- الخدمات -->
+
 <section id="courses">
-<h2 class="title">الدورات المتاحة</h2>
+
+<h2 class="title">خدمات الأكاديمية</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>📖 القرآن الكريم</h3>
-<p>تعليم التلاوة والتجويد وحفظ القرآن الكريم بإشراف معلمين متخصصين.</p>
+<h1>📖</h1>
+<h3>القرآن الكريم</h3>
+<p>
+تحفيظ القرآن الكريم، التجويد، التصحيح، والإجازات على أيدي معلمين ومعلمات متخصصين.
+</p>
 </div>
 
 <div class="card">
-<h3>🌍 اللغة الإنجليزية</h3>
-<p>دورات لجميع المستويات مع التركيز على المحادثة والمهارات العملية.</p>
+<h1>📚</h1>
+<h3>اللغة العربية</h3>
+<p>
+تعليم القراءة والكتابة، النحو، البلاغة، والإملاء لجميع الأعمار.
+</p>
 </div>
 
 <div class="card">
-<h3>💻 البرمجة</h3>
-<p>تعلم تصميم المواقع والتطبيقات باستخدام أحدث التقنيات.</p>
+<h1>☪️</h1>
+<h3>الدراسات الإسلامية</h3>
+<p>
+العقيدة، الفقه، الحديث، السيرة النبوية، والتفسير بطريقة مبسطة.
+</p>
 </div>
 
 <div class="card">
-<h3>🎨 التصميم الجرافيكي</h3>
-<p>تعلم Photoshop وIllustrator وتصميم الهوية البصرية.</p>
-</div>
-
-<div class="card">
-<h3>📱 التسويق الإلكتروني</h3>
-<p>تعلم إدارة الحملات الإعلانية والتسويق عبر وسائل التواصل الاجتماعي.</p>
-</div>
-
-<div class="card">
-<h3>🧠 تنمية المهارات</h3>
-<p>دورات في القيادة، التواصل، وإدارة الوقت والتطوير الشخصي.</p>
+<h1>🎓</h1>
+<h3>المواد الدراسية</h3>
+<p>
+شرح المواد الدراسية لجميع المراحل مع نخبة من أفضل المعلمين.
+</p>
 </div>
 
 </div>
+
 </section>
 
-<section id="features">
+<!-- من نحن -->
+
+<section id="about" style="background:#EEF7FF;">
+
+<h2 class="title">من نحن</h2>
+
+<div style="max-width:900px;margin:auto;text-align:center;font-size:20px;line-height:2.2;">
+
+<p>
+
+أكاديمية الصفوة منصة تعليمية متخصصة في تعليم القرآن الكريم واللغة العربية والدراسات الإسلامية والمواد الدراسية، ونسعى إلى تقديم تعليم متميز يجمع بين الجودة والمرونة باستخدام أحدث وسائل التعليم عن بُعد.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- لماذا نحن -->
+
+<section>
+
 <h2 class="title">لماذا أكاديمية الصفوة؟</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>👨‍🏫 مدربون محترفون</h3>
-<p>فريق من المدربين ذوي الخبرة في مختلف المجالات.</p>
+<h2>⭐</h2>
+<h3>معلمون مؤهلون</h3>
+<p>فريق من المعلمين والمعلمات ذوي الخبرة والكفاءة.</p>
 </div>
 
 <div class="card">
-<h3>🎓 شهادات معتمدة</h3>
-<p>شهادات إتمام للدورات تساعدك في تطوير سيرتك الذاتية.</p>
+<h2>🖥️</h2>
+<h3>تعليم أونلاين</h3>
+<p>دروس مباشرة من أي مكان في العالم.</p>
 </div>
 
 <div class="card">
-<h3>💻 تعلم أونلاين وحضوري</h3>
-<p>اختر الطريقة التي تناسبك للدراسة.</p>
+<h2>📅</h2>
+<h3>مواعيد مرنة</h3>
+<p>يمكن اختيار الوقت المناسب للطالب.</p>
 </div>
 
 <div class="card">
-<h3>📞 دعم مستمر</h3>
-<p>فريق جاهز للإجابة عن استفساراتك ومساعدتك طوال فترة الدراسة.</p>
+<h2>📜</h2>
+<h3>متابعة مستمرة</h3>
+<p>تقارير دورية وخطة تعليمية واضحة لكل طالب.</p>
 </div>
 
 </div>
+
 </section>
+
+<!-- أرقام سريعة -->
+
+<section style="background:#18457A;color:white;">
+
+<div class="cards">
+
+<div class="card">
+<h1 style="color:#D4AF37;">500+</h1>
+<p>طالب وطالبة</p>
+</div>
+
+<div class="card">
+<h1 style="color:#D4AF37;">25+</h1>
+<p>معلم ومعلمة</p>
+</div>
+
+<div class="card">
+<h1 style="color:#D4AF37;">10+</h1>
+<p>دول حول العالم</p>
+</div>
+
+<div class="card">
+<h1 style="color:#D4AF37;">100%</h1>
+<p>تعليم عن بُعد</p>
+</div>
+
+</div>
+
+</section>
+<!-- تواصل معنا -->
+
 <section id="contact">
+
 <h2 class="title">تواصل معنا</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>📱 واتساب</h3>
+<h2>📱 واتساب</h2>
 <p>
-<a href="https://wa.me/201230808515" target="_blank">
-راسلنا مباشرة عبر واتساب
+<a href="https://wa.me/201280308515"
+style="text-decoration:none;color:#18457A;font-weight:bold;">
++20 128 030 8515
 </a>
 </p>
 </div>
 
 <div class="card">
-<h3>📧 البريد الإلكتروني</h3>
+<h2>📧 البريد الإلكتروني</h2>
 <p>
-<a href="mailto:alsfwtakadymy@gmail.com">
+<a href="mailto:alsfwtakadymy@gmail.com"
+style="text-decoration:none;color:#18457A;font-weight:bold;">
 alsfwtakadymy@gmail.com
 </a>
 </p>
 </div>
 
 <div class="card">
-<h3>⏰ أوقات العمل</h3>
-<p>
-السبت - الخميس<br>
-9:00 صباحًا - 9:00 مساءً
-</p>
+<h2>🌍 اللغات</h2>
+<p>العربية | English</p>
 </div>
 
 </div>
+
 </section>
 
-<a href="https://wa.me/201230808515"
+<!-- زر واتساب -->
+
+<a href="https://wa.me/201280308515"
 target="_blank"
 style="
 position:fixed;
-bottom:20px;
-left:20px;
+bottom:25px;
+left:25px;
+width:65px;
+height:65px;
 background:#25D366;
-color:white;
-padding:15px 18px;
 border-radius:50%;
-font-size:28px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,.3);
-z-index:9999;">
+color:white;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+z-index:9999;
+">
 💬
 </a>
 
-<footer style="background:#0d47a1;color:white;text-align:center;padding:25px;margin-top:50px;">
-<h3>أكاديمية الصفوة</h3>
-<p>نحو تعليم متميز ومستقبل أفضل</p>
+<!-- الفوتر -->
 
-<p style="margin-top:10px;">
-📧
-<a href="mailto:alsfwtakadymy@gmail.com" style="color:#FFD54F;">
-alsfwtakadymy@gmail.com
-</a>
+<footer
+style="
+background:#18457A;
+color:white;
+padding:70px 8%;
+margin-top:80px;
+">
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+">
+
+<div>
+
+<h2 style="color:#D4AF37;">
+أكاديمية الصفوة
+</h2>
+
+<p style="margin-top:20px;line-height:2;">
+لتعليم القرآن الكريم واللغة العربية والدراسات الإسلامية والمواد الدراسية
+عن بُعد بأفضل المعلمين والمعلمات.
 </p>
 
-<p>
-📱
-<a href="https://wa.me/201230808515" style="color:#FFD54F;">
-واتساب
-</a>
-</p>
+</div>
 
-<p style="margin-top:15px;">
-© 2026 جميع الحقوق محفوظة - أكاديمية الصفوة
+<div>
+
+<h3 style="color:#D4AF37;">روابط سريعة</h3>
+
+<p><a href="#" style="color:white;text-decoration:none;">الرئيسية</a></p>
+
+<p><a href="#courses" style="color:white;text-decoration:none;">الدورات</a></p>
+
+<p><a href="#about" style="color:white;text-decoration:none;">من نحن</a></p>
+
+<p><a href="#contact" style="color:white;text-decoration:none;">تواصل معنا</a></p>
+
+</div>
+
+<div>
+
+<h3 style="color:#D4AF37;">تواصل</h3>
+
+<p>📱 +20 128 030 8515</p>
+
+<p>📧 alsfwtakadymy@gmail.com</p>
+
+</div>
+
+</div>
+
+<hr style="margin:40px 0;border:none;height:1px;background:#ffffff33;">
+
+<p style="text-align:center;">
+© 2026 Al Safwa Academy | جميع الحقوق محفوظة
 </p>
 
 </footer>
 
+<script>
+
+// تغيير اللغة (سيتم تطويره لاحقاً)
+
+document.querySelector(".lang").onclick=function(){
+
+alert("سيتم إضافة الترجمة العربية والإنجليزية في الإصدار القادم.");
+
+}
+
+</script>
+
 </body>
+
 </html>
